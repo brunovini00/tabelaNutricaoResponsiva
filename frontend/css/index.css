@@ -1,14 +1,29 @@
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-size: 14px;
   height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(#085772), to(#00c9a7));
   background: linear-gradient(to right, #085772 0%, #00c9a7 100%);
   background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
+  -webkit-animation: gradient 15s ease infinite;
+          animation: gradient 15s ease infinite;
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @keyframes gradient {
@@ -87,6 +102,8 @@ table {
   border-collapse: collapse;
   border-radius: 1em;
   overflow: hidden;
+  -webkit-box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 table thead th {
@@ -135,6 +152,9 @@ label {
   border: 1px solid #000000;
   padding: .7em;
   width: 100%;
+  border-radius: 7px;
+  outline: none;
+  border: none;
 }
 
 .campo-medio {
@@ -163,14 +183,16 @@ button {
   display: block;
   clear: both;
   margin: 10px 0px;
+  -webkit-transition: 1s;
   transition: 1s;
 }
 
 button:hover {
-  transform: scale(1.2);
-  background-color: #0e5d88;
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
   border-radius: 5px 10px 5px 10px;
-  border: 2px #000000 solid;
+  -webkit-box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 button:active {
@@ -201,6 +223,7 @@ button[disabled=disabled], button button:disabled {
 
 .fadeOut {
   opacity: 0;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 

@@ -92,6 +92,7 @@ table{
 	border-collapse: collapse;
 	border-radius: 1em;
 	overflow: hidden;
+	box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
 	
 
 	thead {
@@ -143,6 +144,8 @@ label{
 	padding: .7em;
 	width: 100%;
 	border-radius: 7px;
+	outline: none;
+	border: none;
 }
 
 .campo-medio{
@@ -174,10 +177,9 @@ button{
 	transition: 1s;
 
 	&:hover{
-		transform: scale(1.2);
-		background-color:#0e5d88;
+		transform: scale(1.01);
 		border-radius: 5px 10px 5px 10px;
-		border: 2px #000000 solid;
+		box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.3)
 	}
 	
 	&:active{

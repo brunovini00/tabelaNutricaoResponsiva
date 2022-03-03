@@ -6,6 +6,14 @@ botaoAdicionar.addEventListener("click", function(event) {
 
     var paciente = obtemPacienteDoFormulario(form);
 
+    fetch('http://localhost:3000/user', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(paciente)
+    }).then(response => {
+        console.log(response);
+    })
+
     var erros = validaPaciente(paciente);
 
     if (erros.length > 0) {
